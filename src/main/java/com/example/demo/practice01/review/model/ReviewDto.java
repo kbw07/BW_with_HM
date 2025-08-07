@@ -1,5 +1,6 @@
 package com.example.demo.practice01.review.model;
 
+import com.example.demo.practice01.book.model.BookEntity;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ public class ReviewDto {
         private String content;
         private Integer score;
 
-        public Review toEntity(Book book) {
+        public Review toEntity(BookEntity book) {
             return Review.builder()
                     .content(content)
                     .score(score)

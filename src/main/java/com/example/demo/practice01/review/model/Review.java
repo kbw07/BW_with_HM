@@ -1,5 +1,6 @@
 package com.example.demo.practice01.review.model;
 
+import com.example.demo.practice01.book.model.BookEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,5 +24,5 @@ public class Review {
 
     @ManyToOne
     @JoinColumn(name = "book_idx")
-    private Book book;
+    private BookEntity book;
 }

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/Book")
+@RequestMapping("/book")
 public class BookController {
     private final BookService bookService;
 
@@ -19,6 +19,8 @@ public class BookController {
     public ResponseEntity register(@RequestBody BookDto.Register dto) {
         bookService.register(dto);
 
-        return ResponseEntity.status(200).body("책 등록 성공");
+        return ResponseEntity
+                .status(200)
+                .body("책 등록 성공");
     }
 }

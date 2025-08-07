@@ -1,5 +1,6 @@
 package com.example.demo.practice01.book.model;
 
+import com.example.demo.practice01.review.model.Review;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,7 +22,7 @@ public class BookEntity {
     private Integer totalPages;
     private Integer price;
 
-    @OneToMany(mappedBy = "ReviewEntity")
-    private List<ReviewEntity> reviewEntity;
+    @OneToMany(mappedBy = "book")
+    private List<Review> reviewList;
 
 }
