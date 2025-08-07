@@ -1,4 +1,4 @@
-package com.example.demo.review.model;
+package com.example.demo.practice01.review.model;
 
 import lombok.Builder;
 import lombok.Getter;
