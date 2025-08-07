@@ -15,8 +15,8 @@ public class ReviewDto {
 
         public Review toEntity(Book book) {
             return Review.builder()
-                    .content(this.content)
-                    .score(this.score)
+                    .content(content)
+                    .score(score)
                     .book(book)
                     .build();
         }

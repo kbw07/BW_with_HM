@@ -18,11 +18,7 @@ public class ReviewService {
         Book book = bookRepository.findById(bookIdx)
                 .orElseThrow(() -> new IllegalArgumentException("책 없음 bookId=" + bookIdx));
 
-        Review review = Review.builder()
-                .content(requestDto.getContent())
-                .score(requestDto.getScore())
-                .book(book)
-                .build();
+        Review review = requestDto.toEntity(book);
 
         return reviewRepository.save(review).getIdx();
     }
