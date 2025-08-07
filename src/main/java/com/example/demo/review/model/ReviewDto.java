@@ -30,7 +30,7 @@ public class ReviewDto {
         private String content;
         private Integer score;
 
-        public ReviewResponse toDto(Review entity) {
+        public static ReviewResponse toDto(Review entity) {
             return ReviewResponse.builder()
                     .idx(entity.getIdx())
                     .content(entity.getContent())
