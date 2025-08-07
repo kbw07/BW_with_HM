@@ -1,7 +1,7 @@
-package com.example.demo.study.book.controller;
+package com.example.demo.practice01.book.controller;
 
-import com.example.demo.study.book.model.BookDto;
-import com.example.demo.study.book.service.BookService;
+import com.example.demo.practice01.book.model.BookDto;
+import com.example.demo.practice01.book.service.BookService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

@@ -1,9 +1,9 @@
-package com.example.demo.review.service;
+package com.example.demo.practice01.review.service;
 
 
-import com.example.demo.review.model.Review;
-import com.example.demo.review.model.ReviewDto;
-import com.example.demo.review.repository.ReviewRepository;
+import com.example.demo.practice01.review.model.Review;
+import com.example.demo.practice01.review.model.ReviewDto;
+import com.example.demo.practice01.review.repository.ReviewRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
