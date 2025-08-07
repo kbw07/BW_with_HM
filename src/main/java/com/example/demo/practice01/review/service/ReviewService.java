@@ -1,6 +1,8 @@
 package com.example.demo.practice01.review.service;
 
 
+import com.example.demo.practice01.book.model.BookEntity;
+import com.example.demo.practice01.book.repository.BookRepository;
 import com.example.demo.practice01.review.model.Review;
 import com.example.demo.practice01.review.model.ReviewDto;
 import com.example.demo.practice01.review.repository.ReviewRepository;
@@ -15,7 +17,7 @@ public class ReviewService {
     private final ReviewRepository reviewRepository;
 
     public Integer register(Integer bookIdx, ReviewDto.Register requestDto) {
-        Book book = bookRepository.findById(bookIdx)
+        BookEntity book = bookRepository.findById(bookIdx)
                 .orElseThrow(() -> new IllegalArgumentException("책 없음 bookId=" + bookIdx));
 
         Review review = requestDto.toEntity(book);
