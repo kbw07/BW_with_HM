@@ -16,9 +16,9 @@ public class ReviewService {
     private final BookRepository bookRepository;
     private final ReviewRepository reviewRepository;
 
-    public Integer register(Integer bookIdx, ReviewDto.Register requestDto) {
-        BookEntity book = bookRepository.findById(bookIdx)
-                .orElseThrow(() -> new IllegalArgumentException("책 없음 bookId=" + bookIdx));
+    public Integer register(ReviewDto.Register requestDto) {
+        BookEntity book = bookRepository.findById(requestDto.getBookIdx())
+                .orElseThrow(() -> new IllegalArgumentException("책 없음 bookId=" + requestDto.getBookIdx()));
 
         Review review = requestDto.toEntity(book);
 

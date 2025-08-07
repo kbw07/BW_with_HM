@@ -13,6 +13,7 @@ public class ReviewDto {
 
         private String content;
         private Integer score;
+        private Integer bookIdx;
 
         public Review toEntity(BookEntity book) {
             return Review.builder()
